@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROTO TANK COMPANY Sales Form</title>
+
+<style>
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: #f0f2f5;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 750px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.header {
+    background-color: #0a4a7a;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 5px 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Form Area */
+.form-area {
+    padding: 30px 25px;
+}
+
+/* Sections */
+.section {
+    background: #f9fafc;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 5px solid #1e88e5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #0a4a7a;
+}
+
+/* Labels and Inputs */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 5px rgba(30,136,229,0.4);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 16px;
+    background: #25D366;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1ebe5d;
+}
+
+/* Note Section */
+.note {
+    background: #eef4ff;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+    border-left: 5px solid #1e88e5;
+    margin-top: 20px;
+}
+
+.contact {
+    margin-top: 6px;
+    font-weight: 600;
+    color: #0a4a7a;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .header h1 {
+        font-size: 22px;
+    }
+    .section {
+        padding: 18px;
+    }
+    .form-area {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+    <img src="logo.png" alt="ROTO TANK COMPANY Logo">
+    <h1>ROTO TANK COMPANY</h1>
+    <p>ROTO TANK COMPANY Ltd.com</p>
+</div>
+
+<div class="form-area">
+<p style="text-align:center; font-size:14px; margin-bottom:20px;">
+Please provide the following details to process your order and arrange delivery.
+</p>
+
+<form id="orderForm">
+
+<!-- Product Details -->
+<div class="section">
+<h2>Product Details</h2>
+
+<label>1. Tank Size</label>
+<select id="tank" required>
+<option value="">Select Tank Size</option>
+<option>500L</option>
+<option>1000L</option>
+<option>2000L</option>
+<option>5000L</option>
+<option>10000L</option>
+</select>
+
+<label>2. Quantity</label>
+<input type="number" id="qty" min="1" required>
+
+<label>3. Color Preference</label>
+<input type="text" id="color" required>
+</div>
+
+<!-- Delivery Details -->
+<div class="section">
+<h2>Delivery Details</h2>
+
+<label>4. Full Name</label>
+<input type="text" id="name" required>
+
+<label>5. Phone Number</label>
+<input type="tel" id="phone" required>
+
+<label>6. Email</label>
+<input type="email" id="email" required>
+
+<label>7. Exact Delivery Address (Nearby landmarks e.g school, church, mosque)</label>
+<textarea id="address" required></textarea>
+
+<label>8. Preferred Delivery Date & Time</label>
+<input type="datetime-local" id="delivery" required>
+
+<label>9. Payment Method</label>
+<select id="payment" required>
+<option value="">Select Payment Method</option>
+<option>Pesalink</option>
+<option>Bank Transfer</option>
+<option>Visa</option>
+<option>Mobile Money</option>
+</select>
+
+<label>10. Do you need installation?</label>
+<select id="install" required>
+<option value="">Select</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<label>11. Indicate if you want a fixed tap</label>
+<select id="tap" required>
+<option value="">Select</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+<button type="submit">Submit Order via WhatsApp</button>
+</form>
+
+<div class="note">
+<b>NB:</b> Once we receive these details, we’ll confirm the total cost and delivery schedule.
+<br><br>
+Immediately after payment delivery may take around <b>24–48 hrs</b>.
+<div class="contact">
+Call +254 733355444
+</div>
+<br>
+Looking forward to serving you. Thank you!
+</div>
+
+</div>
+</div>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let tank = document.getElementById("tank").value;
+    let qty = document.getElementById("qty").value;
+    let color = document.getElementById("color").value;
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let address = document.getElementById("address").value;
+    let delivery = document.getElementById("delivery").value;
+
+    let payment = document.getElementById("payment").value;
+    let install = document.getElementById("install").value;
+    let tap = document.getElementById("tap").value;
+
+    let message = `ROTO TANK COMPANY ORDER
+
+Product Details
+Tank Size: ${tank}
+Quantity: ${qty}
+Color: ${color}
+
+Customer Details
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+Delivery Address:
+${address}
+
+Preferred Delivery Time:
+${delivery}
+
+Payment Method: ${payment}
+Installation Needed: ${install}
+Fixed Tap: ${tap}
+
+Thank you.`;
+
+    let whatsapp = "https://wa.me/254733355444?text=" + encodeURIComponent(message);
+    window.open(whatsapp, "_blank");
+});
+</script>
+
+</body>
+</html>
